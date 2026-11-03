@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.cm as cm
 
 def Biplot():
-    df = pd.read_excel("C:/dataWomen/dataTensorPaperWomen-ver2.xlsx", header=0, index_col=0)
+    df = pd.read_excel("dataTensorPaperWomen.xlsx", header=0, index_col=0)
 
     countries = df.index.tolist()
     dimensions = ['Preventive Care', 'Emotional Health', 'Opinions of Health and Safety', 'Basic Needs', 'Individual Health']
@@ -71,7 +71,7 @@ def Biplot():
     plt.show()
 
 def DynamicBiplotCountries():
-    df = pd.read_excel("C:/dataWomen/dataTensorPaperWomen-ver2.xlsx", header=0, index_col=0)
+    df = pd.read_excel("dataTensorPaperWomen.xlsx", header=0, index_col=0)
 
     countries = df.index.tolist()
     dimensions = ['Preventive Care', 'Emotional Health', 'Opinions of Health and Safety', 'Basic Needs', 'Individual Health']
@@ -121,7 +121,7 @@ def DynamicBiplotCountries():
     plt.show()
 
 def DynamicBiplotVariables():
-    df = pd.read_excel("C:/dataWomen/dataTensorPaperWomen-ver2.xlsx", header=0, index_col=0)
+    df = pd.read_excel("dataTensorPaperWomen.xlsx", header=0, index_col=0)
 
     countries = df.index.tolist()
     dimensions = ['Preventive Care', 'Emotional Health', 'Opinions of Health and Safety', 'Basic Needs', 'Individual Health']
