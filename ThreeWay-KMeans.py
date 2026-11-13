@@ -27,6 +27,7 @@ highlights = {
 }
 
 def plot_core_with_labels(core_tensor, highlights):
+    plt.rcParams['axes.unicode_minus'] = True
     r0, r1, r2 = core_tensor.shape
     fig, axes = plt.subplots(1, r2, figsize=(5 * r2, 4), constrained_layout=True)
     if r2 == 1:
@@ -38,7 +39,7 @@ def plot_core_with_labels(core_tensor, highlights):
         for i in range(r0):
             for j in range(r1):
                 val = slice_[i, j]
-                label = str(val)
+                label = str(val).replace("-", "\u2212")
                 if val in highlights:
                     label += f"\n({highlights[val]})"
                 annotated[i, j] = label
